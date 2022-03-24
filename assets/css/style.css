@@ -8,16 +8,15 @@ body {
     background-color: #3838a3;
     width: 100%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     width: 80%;
-    height: 80vh;
+    height: auto;
     background-color: #fff;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -40,7 +39,7 @@ body {
     background-color: #fff;
     width: 50%;
     padding: 2rem 5rem;
-    margin-top: 1rem;
+    
 }
 
 .form_header {
@@ -88,16 +87,21 @@ body {
     margin-top: 4rem;
 }
 
+.content1 {
+    width: 45%;
+}
+
 .content1 label, .genero_title p {
     font-size: 1.1rem;
     font-weight: 500;
+    
 }
 
 .content1 input {
     padding: 0.5rem 0.6rem;
     border-radius: 5px;
     border: none;
-    width: 100%;
+    width: 93%;
     margin-top: 1rem;
     margin-bottom: 3rem;
     font-size: 1rem;
@@ -157,34 +161,42 @@ body {
     transition: 0.3s;
 }
 
-@media screen and (max-width: 1540px) {
-
+@media screen and (max-width: 1610px) {
     .container {
-        width: 50%;
+        width: 45rem;
         height: auto;
+        justify-content: center;
     }
     .image {
         display: none;
     }
     .form {
         width: 100%;
-    } 
-} 
+    }
+}
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 830px) {
     .container {
-        width: 90%;
-        height: auto;
-        display: flex;
-        justify-content: center;
+        width: 80%;
     }
-    .form {
-        width: 25rem;
-        
-    }
+
     .content {
         flex-direction: column;
-        
+        width: 100%;
+        height: 40vh;
+        overflow-y: scroll;   
+    }
+
+    .content {
+        height: 25vh;
+    }
+    
+    .content1 {
+        width: 100%;
+    }
+
+    .content1 input {
+        width: 90%;
     }
 
     .genero_form {
@@ -193,40 +205,92 @@ body {
     }
 }
 
-@media screen and (max-width: 580px) {
-    .title h1 {
-        font-size: 2rem;
+@media screen and (max-width: 640px) {
+    .form {
+    padding: 1rem;
     }
-    .title h1::after {
-        width: 4.5rem;
-    }
-    .form_botao button {
-        font-size: 1rem;
-    }
-}
 
-@media screen and (max-width: 470px) {
     .form_header {
         flex-direction: column;
     }
 
     .title h1 {
-        margin-bottom: 2rem;
+        font-size: 2rem;
     }
 
-    .form {
-        padding: 2rem 1rem 3rem 1rem;
+    .title h1::after {
+        width: 4.5rem;
+        margin-top: -4px;
     }
 
-    .content {
-        align-items: flex-start;
+    .form_botao {
+        margin-top: 2rem;
     }
 
-    .content1 {
-        width: 100%;
+    .form_botao button {
+        font-size: 1rem;
     }
 
     .content1 input {
-        width: 90%;
+        width: 80%;
+    }
+}
+
+@media screen and (max-height: 720px) {
+    .content {
+        flex-direction: column;
+        width: 100%;
+        overflow-y: scroll; 
+        height: 25vh;
+    }
+    .content1 {
+        width: 100%;
+    }
+    .content1 input {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-height: 640px) {
+    .content {
+        height: 25vh;
+    }
+
+    .genero_form {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .content {
+        height: 15vh;
+    }
+}
+
+@media screen and (max-height: 440px) {
+    
+    .content {
+        height: 15vh;
+        margin-top: 5px;
+    }
+    .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .title h1::after {
+        width: 3.4rem;
+        margin-top: -2px;
+    }
+    .form_botao button, .botao_continuar button {
+        font-size: 0.8rem;
+    }
+    .content1 label, .genero_title p, .genero_form label {
+        font-size: 0.9rem;
+    }
+    .genero_form {
+        margin-bottom: 1rem;
     }
 }
