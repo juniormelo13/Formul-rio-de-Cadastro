@@ -178,19 +178,16 @@ body {
 @media screen and (max-width: 830px) {
     .container {
         width: 80%;
+        height: auto;
     }
 
     .content {
         flex-direction: column;
         width: 100%;
-        height: 40vh;
-        overflow-y: scroll;   
+        height: 35vh;
+        overflow-y: scroll;
     }
 
-    .content {
-        height: 25vh;
-    }
-    
     .content1 {
         width: 100%;
     }
@@ -206,6 +203,10 @@ body {
 }
 
 @media screen and (max-width: 640px) {
+    .container {
+        width: 90%;
+    }
+
     .form {
     padding: 1rem;
     }
@@ -231,66 +232,12 @@ body {
         font-size: 1rem;
     }
 
+    .content {
+        height: 25vh;
+    }
+
     .content1 input {
         width: 80%;
     }
 }
 
-@media screen and (max-height: 720px) {
-    .content {
-        flex-direction: column;
-        width: 100%;
-        overflow-y: scroll; 
-        height: 25vh;
-    }
-    .content1 {
-        width: 100%;
-    }
-    .content1 input {
-        width: 80%;
-    }
-
-}
-
-@media screen and (max-height: 640px) {
-    .content {
-        height: 25vh;
-    }
-
-    .genero_form {
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-}
-
-@media screen and (max-height: 500px) {
-    .content {
-        height: 15vh;
-    }
-}
-
-@media screen and (max-height: 440px) {
-    
-    .content {
-        height: 15vh;
-        margin-top: 5px;
-    }
-    .title h1 {
-        font-size: 1.5rem;
-    }
-
-    .title h1::after {
-        width: 3.4rem;
-        margin-top: -2px;
-    }
-    .form_botao button, .botao_continuar button {
-        font-size: 0.8rem;
-    }
-    .content1 label, .genero_title p, .genero_form label {
-        font-size: 0.9rem;
-    }
-    .genero_form {
-        margin-bottom: 1rem;
-    }
-}
