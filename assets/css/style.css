@@ -176,11 +176,6 @@ body {
 }
 
 @media screen and (max-width: 830px) {
-
-    body {
-        align-items: flex-start;
-        padding: 1rem 0 1rem 0;
-    }
     .container {
         
         width: 90%;
@@ -209,6 +204,11 @@ body {
 }
 
 @media screen and (max-width: 640px) {
+    body {
+        align-items: flex-start;
+        padding: 1rem 0 1rem 0;
+    }
+ 
     .container {
         width: 90%;
     }
